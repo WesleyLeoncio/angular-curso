@@ -1,0 +1,130 @@
+{
+  "pensamentos": [
+    {
+      "id": 1,
+      "conteudo": "O sonho de um homem! Nunca tem fim!",
+      "autoria": "eiichiro oda",
+      "modelo": "modelo1",
+      "favorito": true
+    },
+    {
+      "id": 2,
+      "conteudo": "Pensamento 2",
+      "autoria": "wesley",
+      "modelo": "modelo2",
+      "favorito": true
+    },
+    {
+      "id": 3,
+      "conteudo": "Pensamento 3",
+      "autoria": "wesley",
+      "modelo": "modelo3",
+      "favorito": false
+    },
+    {
+      "id": 4,
+      "conteudo": "Pensamento 4",
+      "autoria": "wesley",
+      "modelo": "modelo1",
+      "favorito": false
+    },
+    {
+      "id": 5,
+      "conteudo": "Pensamento 5",
+      "autoria": "wesley",
+      "modelo": "modelo2",
+      "favorito": false
+    },
+    {
+      "id": 6,
+      "conteudo": "Pensamento 6",
+      "autoria": "wesley",
+      "modelo": "modelo3",
+      "favorito": false
+    },
+    {
+      "id": 7,
+      "conteudo": "Pensamento 7",
+      "autoria": "fizz",
+      "modelo": "modelo1",
+      "favorito": false
+    },
+    {
+      "id": 8,
+      "conteudo": "Pensamento 9",
+      "autoria": "ahri",
+      "modelo": "modelo2",
+      "favorito": false
+    },
+    {
+      "id": 9,
+      "conteudo": "Pensamento 9",
+      "autoria": "wesley",
+      "modelo": "modelo3",
+      "favorito": false
+    },
+    {
+      "id": 10,
+      "conteudo": "Pensamento 10",
+      "autoria": "wesley",
+      "modelo": "modelo1",
+      "favorito": false
+    },
+    {
+      "id": 11,
+      "conteudo": "Pensamento 11",
+      "autoria": "wesley",
+      "modelo": "modelo2",
+      "favorito": false
+    },
+    {
+      "id": 12,
+      "conteudo": "Pensamento 12",
+      "autoria": "wesley",
+      "modelo": "modelo3",
+      "favorito": false
+    },
+    {
+      "id": 13,
+      "conteudo": "Pensamento 13",
+      "autoria": "wesley",
+      "modelo": "modelo1",
+      "favorito": false
+    },
+    {
+      "id": 14,
+      "conteudo": "Pensamento 14",
+      "autoria": "wesley",
+      "modelo": "modelo2",
+      "favorito": false
+    },
+    {
+      "id": 15,
+      "conteudo": "Pensamento 15",
+      "autoria": "wesley",
+      "modelo": "modelo3",
+      "favorito": false
+    },
+    {
+      "id": 16,
+      "conteudo": "Pensamento 16",
+      "autoria": "wesley",
+      "modelo": "modelo1",
+      "favorito": false
+    },
+    {
+      "id": 17,
+      "conteudo": "Pensamento 17",
+      "autoria": "wesley",
+      "modelo": "modelo2",
+      "favorito": false
+    },
+    {
+      "id": 18,
+      "conteudo": "Pensamento 18",
+      "autoria": "wesley",
+      "modelo": "modelo3",
+      "favorito": false
+    }
+  ]
+}
