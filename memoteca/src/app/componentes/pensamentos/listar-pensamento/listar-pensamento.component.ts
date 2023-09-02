@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Pensamento} from "../pensamento";
 import {PensamentoService} from "../../../../service/pensamento.service";
-import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-listar-pensamento',
@@ -17,34 +16,35 @@ export class ListarPensamentoComponent implements OnInit {
   favorito: boolean = false;
   listPensamentoFavorito: Pensamento[] = [];
   titulo: string = 'Meu Mural';
+
   constructor(
     private service: PensamentoService,
-    private router: Router
   ) {
   }
 
   ngOnInit(): void {
+    this.buscarPensamento();
+  }
+
+  buscarPensamento(): void{
     this.service.listar(this.paginaAtual, this.filtro, this.favorito)
-        .subscribe((listaPensamentos) => {
-      this.listaPensamentos = listaPensamentos;
-    });
+      .subscribe((listaPensamentos) => {
+        this.listaPensamentos = listaPensamentos;
+      });
   }
 
   carregarMaisPensamentos() {
     this.service.listar(++this.paginaAtual, this.filtro, this.favorito)
-        .subscribe(listaPensamentos => {
-      this.listaPensamentos.push(...listaPensamentos);
-      if (!listaPensamentos.length) this.haMaisPensamentos = false;
-    });
+      .subscribe(listaPensamentos => {
+        this.listaPensamentos.push(...listaPensamentos);
+        if (!listaPensamentos.length) this.haMaisPensamentos = false;
+      });
   }
 
   pesquisarPensamentos() {
     this.haMaisPensamentos = true;
     this.paginaAtual = 1;
-    this.service.listar(this.paginaAtual, this.filtro, this.favorito)
-      .subscribe(listaPensamento => {
-        this.listaPensamentos = listaPensamento;
-      });
+    this.buscarPensamento();
   }
 
   listarFavoritos() {
@@ -59,13 +59,10 @@ export class ListarPensamentoComponent implements OnInit {
       });
   }
 
-  //TODO Tocar os metodos Deprecated
-  recarregarComponente(){
+  meuMural(): void {
     this.favorito = false;
     this.paginaAtual = 1;
-    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-    this.router.onSameUrlNavigation = "reload";
-    this.router.navigate([this.router.url]);
+    this.buscarPensamento();
   }
 
 }
