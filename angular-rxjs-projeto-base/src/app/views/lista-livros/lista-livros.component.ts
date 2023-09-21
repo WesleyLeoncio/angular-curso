@@ -4,7 +4,7 @@ import {LivroVolumeInfo} from "../../models/livro/class/livro-volume-info";
 import {Item} from "../../models/livro/interfaces/item";
 import {FormControl} from "@angular/forms";
 import {catchError, debounceTime, filter, map, Observable, switchMap, throwError} from "rxjs";
-import {LivrosResultado} from "../../models/livro/interfaces/livros-resultado";
+
 
 const PAUSE = 1000;
 @Component({
@@ -16,7 +16,7 @@ export class ListaLivrosComponent{
 
   campoBusca:FormControl<string> = new FormControl();
   mensagemErro:string = '';
-  livrosResultado: LivrosResultado;
+  totalItens: number;
 
 
   livrosEncontrados$: Observable<LivroVolumeInfo[]> = this.campoBusca.valueChanges.pipe(
@@ -24,7 +24,7 @@ export class ListaLivrosComponent{
     filter((valorDigitado) => valorDigitado.length >= 3),
     switchMap((valorDigitado: string) => this.service.buscar(valorDigitado)),
     map(resultado => {
-      this.livrosResultado = resultado;
+      this.totalItens = resultado.totalItems;
       return resultado.items ?? [];
     }),
     map((itens: Item[]) =>this.livrosResultadoParaLivros(itens)),
